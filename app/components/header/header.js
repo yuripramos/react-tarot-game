@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './button/Button.js';
 import style from './style.scss';
 
 const Header = (props) => {
@@ -9,6 +10,7 @@ const Header = (props) => {
         Clique no botão Iniciar e selecione uma carta por vez<br />
         Boa sorte!
       </p>
+      <Button />
     </div>
   );
 };
