@@ -110,7 +110,7 @@ const config = {
       },
     ],
   },
-  plugins: [CleanPlugin, HTMLWebpackPluginConfig, ExtractTextPluginCSS],
+  plugins: [CleanPlugin, HTMLWebpackPluginConfig, ExtractTextPluginCSS, FaviconPlugin],
   devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-source-map',
 };
 

@@ -1,0 +1,15 @@
+body {
+  font-family: 'Open sans', serif;
+  margin: 10px;
+  background:rgba(58, 109, 152, 0.5);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 300;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import auth from '../helpers/auth.js';
 import '../assets/styles/app.css';
+import Header from './header/header.js';
 
 
 export default class extends Component {
@@ -19,11 +20,12 @@ export default class extends Component {
     });
   }
 
-
   render() {
     return (
-      <div>
-        <p> olá </p>
+      <div className="container">
+        <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+          <Header />
+        </div>
       </div>
     );
   }
