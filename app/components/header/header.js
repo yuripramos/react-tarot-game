@@ -10,7 +10,7 @@ const Header = (props) => {
         Clique no botão Iniciar e selecione uma carta por vez.<br />
         Boa sorte!
       </p>
-      <Button />
+      <Button start={props.start} />
     </div>
   );
 };

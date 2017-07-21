@@ -13,24 +13,36 @@ export default class extends Component {
     this.state = {
       items: [],
       loaded: false,
+      shuffledCards: [],
+      isShowing: true,
     };
     axios.get('http://localhost:8080/tarot.json')
     .then(res => {
       this.setState({ items: res.data, loaded: true });
     });
+    this.start = this.start.bind(this);
   }
-
+  shuffle(a) {
+    for (let i = a.length; i; i--) {
+      let j = Math.floor(Math.random() * i);
+      [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
+  }
+  start() {
+    this.setState({ isShowing: false, shuffledCards: this.shuffle(this.state.items.cards) });
+  }
   render() {
     return (
       <div className="container">
         <div className="col-lg-12 col-md-12 col-sm-12 text-center">
-          <Header />
+          <Header start={this.start} />
           {
           this.state.loaded &&
             <Container
               cards={this.state.items.cards}
               basePath={this.state.items.imagesUrl}
               backCard={this.state.items.imageBackCard}
+              isShowing={this.state.isShowing}
             />
           }
         </div>
