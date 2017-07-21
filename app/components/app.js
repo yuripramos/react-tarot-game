@@ -21,14 +21,17 @@ export default class extends Component {
   }
 
   render() {
-    console.log('console em app', this.state.items);
-    console.log(this.state.loaded);
     return (
       <div className="container">
         <div className="col-lg-12 col-md-12 col-sm-12 text-center">
           <Header />
           {
-            this.state.loaded && <Container cards={this.state.items.cards} />
+          this.state.loaded &&
+            <Container
+              cards={this.state.items.cards}
+              basePath={this.state.items.imagesUrl}
+              backCard={this.state.items.imageBackCard}
+            />
           }
         </div>
       </div>

@@ -1,0 +1,13 @@
+.card {
+  margin: 20px ;
+  background: rgba(255,255,255,0.5);
+  height: 380px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px 7px rgba(0, 0, 0, 0.4);
+}
+
+.img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

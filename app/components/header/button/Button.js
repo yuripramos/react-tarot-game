@@ -3,7 +3,7 @@ import style from './style.scss';
 
 const Button = (props) => {
   return (
-    <div>
+    <div className={style.buttonWrapper}>
       <a className={style.button1}>Iniciar</a>
     </div>
   );
