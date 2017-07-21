@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './button/Button.js';
 import style from './style.scss';
 
-const Header = (props) => {
+const Header = ({ start, isShowing }) => {
   return (
     <div>
       <h1>O Destino</h1>
@@ -10,7 +10,7 @@ const Header = (props) => {
         Clique no botão Iniciar e selecione uma carta por vez.<br />
         Boa sorte!
       </p>
-      <Button start={props.start} />
+      <Button start={start} isShowing={isShowing} />
     </div>
   );
 };

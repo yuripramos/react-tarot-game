@@ -35,7 +35,7 @@ export default class extends Component {
     return (
       <div className="container">
         <div className="col-lg-12 col-md-12 col-sm-12 text-center">
-          <Header start={this.start} />
+          <Header start={this.start} isShowing={this.state.isShowing} />
           {
           this.state.loaded &&
             <Container

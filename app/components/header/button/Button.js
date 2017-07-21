@@ -1,10 +1,12 @@
 import React from 'react';
 import style from './style.scss';
 
-const Button = ({ start }) => {
+const Button = ({ start, isShowing }) => {
   return (
     <div className={style.buttonWrapper}>
-      <a className={style.button1} onClick={start}>Iniciar</a>
+      <button disabled={!isShowing} onClick={start}>
+        <a className={style.button1}>Iniciar</a>
+      </button>
     </div>
   );
 };
