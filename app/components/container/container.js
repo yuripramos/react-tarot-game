@@ -10,12 +10,19 @@ class Container extends Component {
     };
   }
   render() {
-    const rest = { basePath: this.props.basePath, backCard: this.props.backCard, isShowing: this.props.isShowing };
+    const rest = {
+      basePath: this.props.basePath,
+      backCard: this.props.backCard,
+      isShowing: this.props.isShowing,
+      flip: this.props.flip,
+      isShowingEach: this.props.isShowingEach,
+      checkBeforeFlip: this.props.checkBeforeFlip
+    };
     const cardsMap = this.props.cards.map((item, key) => {
       return (
         <Card
           item={item}
-          key={key}
+          keyId={key}
           {...rest}
         />
       );
