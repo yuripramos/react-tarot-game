@@ -9,27 +9,32 @@ class Container extends Component {
       isFlipped: false,
       oneOpened: true,
       history: [],
+      childFlipToFalse: false,
     };
     this.historyToggleStates = this.historyToggleStates.bind(this);
-    this.handleMoreThanOneFlip = this.handleMoreThanOneFlip.bind(this);
-    this.checkOneOpened = this.checkOneOpened.bind(this);
+    this.forceFlipParent = this.forceFlipParent.bind(this);
+    this.checkForceFlip = false;
   }
-  historyToggleStates(bool, id) {
-    if (bool !== undefined) {
-      this.setState({
-        history: this.state.history.concat([{ opened: bool, id }]),
-      });
-    }
-  }
-  handleMoreThanOneFlip(id) {
-    console.log('handleclick parent');
-    this.setState({ isFlipped: false }, () => {
-      this.historyToggleStates(this.state.isFlipped, id);
+  historyToggleStates(bool, id, callForceFlip) {
+    this.setState({
+      history: this.state.history.concat([{ opened: bool, id }]),
+    }, () => {
+      console.log('inside historyToggleStates');
+      if (callForceFlip) {
+        this.forceFlipParent()
+      }
     });
   }
-  checkOneOpened(e, id) {
-    if (!this.props.isShowing) {
-      this.handleMoreThanOneFlip(id);
+  forceFlipParent() {
+    const { history } = this.state;
+    const first = history[0];
+    const last = history[history.length - 1];
+    const beforeLast = history[history.length - 2];
+    console.log('force FLIP PARENT');
+    if (history.length > 1) {
+      if (JSON.stringify(last.opened) === JSON.stringify(beforeLast.opened)) {
+        this.setState({ childFlipToFalse: true });
+      }
     }
   }
   render() {
@@ -38,10 +43,12 @@ class Container extends Component {
       backCard: this.props.backCard,
       isShowing: this.props.isShowing,
       historyToggleStates: this.historyToggleStates,
-      isOpened: this.state.isOpened,
       isFlipped: this.state.isFlipped,
       checkOneOpened: this.checkOneOpened,
       history: this.state.history,
+      forceFlip: this.state.childFlipToFalse,
+      flipToFalse: this.forceFlipParent,
+
     };
     const cardsMap = this.props.cards.map((item, key) => {
       return (
