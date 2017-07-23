@@ -30,13 +30,7 @@ export default class extends Component {
   start() {
     this.setState({ isShowing: false, shuffledCards: this.shuffle(this.state.items.cards) });
   }
-  flip(id) {
-    // this.setState({ isShowingEach: !this.state.isShowingEach });
-  }
-  checkBeforeFlip(value) {
-    // console.log(this.state.isShowingEach);
-    // return value;
-  }
+
   render() {
     return (
       <div className="container">
@@ -49,9 +43,6 @@ export default class extends Component {
               basePath={this.state.items.imagesUrl}
               backCard={this.state.items.imageBackCard}
               isShowing={this.state.isShowing}
-              isShowingEach={this.state.isShowingEach}
-              checkBeforeFlip={this.checkBeforeFlip}
-              flip={this.flip}
             />
           }
         </div>
