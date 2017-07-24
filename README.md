@@ -3,9 +3,9 @@
 
 ## :octocat: Getting Started
 This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible
-1 - Click on the start button
-2 - Click in one card, you can choose only one per click
-3 - The game ends when there's no card left on the table
+1 - Click on the start button, the cards will be shuffled and flipped.
+2 - Click in one card, you can choose only one per click.
+3 - The game ends when there's no card left on the table.
 
 
 ## :cloud: Installation
@@ -35,7 +35,7 @@ Want to use Continuous Deployment in other repositories? [**Check the docs**](ht
 
 **Release 0.0.1** (current) - First release of the app
 
-**Release 0.0.2** - Finish development of the unit tests, using JEST
+**Release 0.0.2** - Finish development of the unit tests, using JEST + Enzyme
 
 **Release 0.0.3** - Improvements in the responsiveness and UI
 

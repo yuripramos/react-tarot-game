@@ -8,8 +8,6 @@ class Card extends Component {
     super(props);
     this.state = {
       isFlipped: false,
-      update: false,
-      id: 9999999,
     };
     this.handleClick = this.handleClick.bind(this);
     this.checkOneOpened = this.checkOneOpened.bind(this);
@@ -50,14 +48,25 @@ class Card extends Component {
           flipSpeedBackToFront={0.9}
           flipSpeedFrontToBack={0.9}
         >
-          <div key="front" data-tip={isShowing ? `${item.name}` : 'clique para descobrir'}>
+          <div
+            key="front"
+            data-tip={isShowing ?
+            `${item.name} <br/> <br/> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum` :
+            'clique para descobrir'}
+            data-multiline
+          >
             <button
               onClick={() => this.checkOneOpened()}
             >
               <img src={isShowing ? `${basePath}${item.image}` : backCard} alt={item.name} className={`${style.img}`} />
             </button>
           </div>
-          <div key="back" data-tip={isShowing ? '' : `${item.name}`}>
+          <div
+            key="back"
+            data-tip={isShowing ? '' :
+            `${item.name} <br/> <br/> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum`}
+            data-multiline
+          >
             <button
               onClick={() => this.checkOneOpened()}
             >

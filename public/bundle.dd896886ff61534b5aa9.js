@@ -2416,9 +2416,7 @@ var Card = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
 
     _this.state = {
-      isFlipped: false,
-      update: false,
-      id: 9999999
+      isFlipped: false
     };
     _this.handleClick = _this.handleClick.bind(_this);
     _this.checkOneOpened = _this.checkOneOpened.bind(_this);
@@ -2483,7 +2481,11 @@ var Card = function (_Component) {
           },
           _react2.default.createElement(
             'div',
-            { key: 'front', 'data-tip': isShowing ? '' + item.name : 'clique para descobrir' },
+            {
+              key: 'front',
+              'data-tip': isShowing ? item.name + ' <br/> <br/> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum' : 'clique para descobrir',
+              'data-multiline': true
+            },
             _react2.default.createElement(
               'button',
               {
@@ -2496,7 +2498,11 @@ var Card = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { key: 'back', 'data-tip': isShowing ? '' : '' + item.name },
+            {
+              key: 'back',
+              'data-tip': isShowing ? '' : item.name + ' <br/> <br/> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+              'data-multiline': true
+            },
             _react2.default.createElement(
               'button',
               {
@@ -2570,8 +2576,7 @@ var Container = function (_Component) {
 
     _this.state = {
       isFlipped: false,
-      history: [],
-      childFlipToFalse: false
+      history: []
     };
     _this.historyToggleStates = _this.historyToggleStates.bind(_this);
     return _this;
@@ -5993,4 +5998,4 @@ exports.default = function (nodeList) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.289e8306c5134dd8de0a.js.map
+//# sourceMappingURL=bundle.dd896886ff61534b5aa9.js.map

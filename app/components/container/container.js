@@ -7,7 +7,6 @@ class Container extends Component {
     this.state = {
       isFlipped: false,
       history: [],
-      childFlipToFalse: false,
     };
     this.historyToggleStates = this.historyToggleStates.bind(this);
   }
