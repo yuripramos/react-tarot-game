@@ -2,10 +2,10 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 ## :octocat: Getting Started
-This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible
-1 - Click on the start button, the cards will be shuffled and flipped.
-2 - Click in one card, you can choose only one per click.
-3 - The game ends when there's no card left on the table.
+This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible <br/>
+1 - Click on the start button, the cards will be shuffled and flipped. <br/>
+2 - Click in one card, you can choose only one per click. <br/>
+3 - The game ends when there's no card left on the table. <br/>
 
 
 ## :cloud: Installation
