@@ -25,7 +25,7 @@ npm run build
 Have an idea? Found a bug? PR? contact-me @ yuri.pramos@gmail.com
 
 ## :on: Demo in Production (Continuous Deployment)
-http://pathologist-karl-50205.netlify.com/
+http://hunter-clothing-77466.netlify.com/
 
 Know more about this amazing service called [**Netlify**](https://www.netlify.com/) that I use for deployment.
 
