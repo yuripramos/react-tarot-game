@@ -1,42 +1,22 @@
 import React, { PropTypes, Component } from 'react';
 import Card from './card/card.js';
-import style from './style.scss';
 
 class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isFlipped: false,
-      oneOpened: true,
       history: [],
       childFlipToFalse: false,
     };
     this.historyToggleStates = this.historyToggleStates.bind(this);
-    this.forceFlipParent = this.forceFlipParent.bind(this);
-    this.checkForceFlip = false;
   }
-  historyToggleStates(bool, id, callForceFlip) {
+  historyToggleStates(bool, id) {
     this.setState({
       history: this.state.history.concat([{ opened: bool, id }]),
-    }, () => {
-      console.log('inside historyToggleStates');
-      if (callForceFlip) {
-        this.forceFlipParent()
-      }
     });
   }
-  forceFlipParent() {
-    const { history } = this.state;
-    const first = history[0];
-    const last = history[history.length - 1];
-    const beforeLast = history[history.length - 2];
-    console.log('force FLIP PARENT');
-    if (history.length > 1) {
-      if (JSON.stringify(last.opened) === JSON.stringify(beforeLast.opened)) {
-        this.setState({ childFlipToFalse: true });
-      }
-    }
-  }
+
   render() {
     const rest = {
       basePath: this.props.basePath,
@@ -46,8 +26,6 @@ class Container extends Component {
       isFlipped: this.state.isFlipped,
       checkOneOpened: this.checkOneOpened,
       history: this.state.history,
-      forceFlip: this.state.childFlipToFalse,
-      flipToFalse: this.forceFlipParent,
 
     };
     const cardsMap = this.props.cards.map((item, key) => {
@@ -66,7 +44,6 @@ class Container extends Component {
     );
   }
 }
-
 
 export default Container;
 

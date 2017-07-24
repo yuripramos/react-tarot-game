@@ -4,7 +4,8 @@
 ## :octocat: Getting Started
 This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible
 1 - Click on the start button
-2 - Click in One card, you can choose only.
+2 - Click in one card, you can choose only one per click
+3 - The game ends when there's no card left on the table
 
 
 ## :cloud: Installation

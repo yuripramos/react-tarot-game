@@ -15,7 +15,7 @@ export default class extends Component {
       shuffledCards: [],
       isShowing: true,
     };
-    axios.get('http://localhost:8080/tarot.json')
+    axios.get('https://raw.githubusercontent.com/Personare/front-end-challenge/master/tarot.json')
     .then(res => {
       this.setState({ items: res.data, loaded: true });
     });

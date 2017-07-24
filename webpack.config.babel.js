@@ -65,12 +65,10 @@ const config = {
     filename: 'bundle.[hash].js',
     chunkFilename: 'chunk.[hash].js',
   },
-  resolve : {
+  resolve: {
     alias: {
-      applicationStyles: '',
-      actions: '',
-      reducers: '',
-      configureStore: '',
+      react: "preact-compat",
+      "react-dom": "preact-compat",
     },
     modules: [
       path.resolve(__dirname),

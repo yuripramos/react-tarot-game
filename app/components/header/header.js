@@ -8,7 +8,7 @@ const Header = ({ start, isShowing }) => {
       <h1>O Destino</h1>
       <p className={style.mainInstructions}>
         Clique no botão Iniciar e selecione uma carta por vez.<br />
-        Boa sorte!
+        O jogo termina quando não houverem mais cartas para selecionar, boa sorte!
       </p>
       <Button start={start} isShowing={isShowing} />
     </div>
