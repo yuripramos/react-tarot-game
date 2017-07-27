@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import ReactTooltip from 'react-tooltip';
+import * as Redux from 'react-redux';
+import * as actions from '../../../actions/actions.js';
 import style from './style.scss';
 
 class Card extends Component {
@@ -33,14 +35,15 @@ class Card extends Component {
     });
   }
 
-  checkOneOpened(e) {
+  checkOneOpened(id) {
+    const { dispatch } = this.props;
     if (!this.props.isShowing) {
-      this.handleClick(e);
+      dispatch(actions.toggleEachCard(id, this.state.isFlipped));
     }
   }
 
   render() {
-    const { item, basePath, backCard, isShowing } = this.props;
+    const { item, basePath, backCard, isShowing, keyId } = this.props;
     return (
       <div className={`col-lg-2 col-md-3 col-sm-6 ${style.card}`}>
         <ReactCardFlip
@@ -56,7 +59,7 @@ class Card extends Component {
             data-multiline
           >
             <button
-              onClick={() => this.checkOneOpened()}
+              onClick={() => this.checkOneOpened(keyId)}
             >
               <img src={isShowing ? `${basePath}${item.image}` : backCard} alt={item.name} className={`${style.img}`} />
             </button>
@@ -68,7 +71,7 @@ class Card extends Component {
             data-multiline
           >
             <button
-              onClick={() => this.checkOneOpened()}
+              onClick={() => this.checkOneOpened(keyId)}
             >
               <img src={isShowing ? backCard : `${basePath}${item.image}`} alt={item.name} className={`${style.img}`} />
             </button>
@@ -80,7 +83,7 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default Redux.connect()(Card);
 
 
 Card.propTypes = {
