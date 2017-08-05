@@ -1,12 +1,12 @@
 export const toggleEachCardReducer = (state = false, action) => { // possivelmente trocar action por id
+  console.log('toggle each card reducer!!', action);
+  console.log('state', state);
   switch (action.type) {
     case 'TOGGLE_EACH_CARD':
-      console.log(action);
-      return action;
-      // return state.map(card =>
-      // (card.id === action.id)
-      // ? { ...card, opened: !action.opened }
-      // : card)
+      return [
+        ...state,
+        !state,
+      ];
     default:
       return state;
   }

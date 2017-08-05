@@ -19,7 +19,6 @@ class Container extends Component {
   }
 
   render() {
-    console.log(this.props);
     const rest = {
       basePath: this.props.basePath,
       backCard: this.props.backCard,
@@ -53,15 +52,17 @@ class Container extends Component {
 //   }
 // }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onClick: () => {
-      dispatch(actions.toggleEachCard(ownProps))
-    }
-  };
-}
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   return {
+//     onClick: () => {
+//       dispatch(actions.toggleEachCard(ownProps))
+//     }
+//   };
+// }
 
-const container = connect(mapDispatchToProps)(Container);
+const container = connect((state) => {
+  return state;
+})(Container);
 
 export default container;
 

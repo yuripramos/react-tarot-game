@@ -1,4 +1,5 @@
 export var toggleEachCard = (id, opened) => {
+  console.log('toggle each card action!!');
   return {
     type: 'TOGGLE_EACH_CARD',
     opened,
