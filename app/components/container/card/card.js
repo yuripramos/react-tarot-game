@@ -19,7 +19,7 @@ class Card extends Component {
 	}
 
 	handleClick(e) {
-		const { keyId, historyToggleStates } = this.props;
+		const { historyToggleStates } = this.props;
 		if (e) {
 			e.preventDefault();
 		}
