@@ -7,10 +7,10 @@ class Container extends Component {
 		this.state = {
 			countClicks: 0,
 			cardsState: true,
-			history: [],
 		};
 		this.historyToggleStates = this.historyToggleStates.bind(this);
 	}
+
 	historyToggleStates() {
 		this.setState({ countClicks: this.state.countClicks + 1, cardsState: !this.state.cardsState });
 	}

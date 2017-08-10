@@ -12,6 +12,7 @@ class Card extends Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.checkOneOpened = this.checkOneOpened.bind(this);
 	}
+
 	componentWillReceiveProps(nextprops) {
 		if (nextprops.cardsState) {
 			this.setState({ isFlipped: false });

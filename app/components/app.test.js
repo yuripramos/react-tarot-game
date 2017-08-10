@@ -1,5 +1,6 @@
 import axios from 'axios';
-
+import React from 'react';
+import * as renderer from 'react-test-renderer';
 
 describe('API tests', () => {
 	it('check if response it\'s true', () => {
@@ -22,5 +23,16 @@ describe('API tests', () => {
 			expect(res.data.cards[0]).toHaveProperty('image');
 			expect(res.data.cards[0]).toHaveProperty('name');
 		});
+	});
+});
+
+describe('Renderer correctly', () => {
+	it('<App /> Component Rendering', () => {
+		const tree = renderer.create(
+			<div className="container">
+				<div className="col-lg-12 col-md-12 col-sm-12 text-center" />
+			</div>
+		).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

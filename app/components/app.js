@@ -5,7 +5,7 @@ import Header from './header/header.js';
 import Container from './container/container.js';
 
 
-export default class extends Component {
+export default class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
