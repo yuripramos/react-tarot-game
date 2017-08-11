@@ -1,11 +1,12 @@
 # React-Tarot
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 
 ## :octocat: Getting Started
 This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible <br/>
 1 - Click on the start button, the cards will be shuffled and flipped. <br/>
 2 - Click in one card, you can choose only one per click. <br/>
 3 - After the click your card will be flipped and you can see the infos about it. <br/>
+4 - If you click in one card with another one already flipped the default action is to unflip this one.
 
 
 ## :cloud: Installation
@@ -25,7 +26,7 @@ npm run build
 Have an idea? Found a bug? PR? contact-me @ yuri.pramos@gmail.com
 
 ## :on: Demo in Production (Continuous Deployment)
-http://hunter-clothing-77466.netlify.com/
+http://realtor-donkey-55357.netlify.com
 
 Know more about this amazing service called [**Netlify**](https://www.netlify.com/) that I use for deployment.
 
