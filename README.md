@@ -13,8 +13,9 @@ This is an app that shows "The Destiny" game, when you can play Tarot. Rules as 
 
 
 ```sh
-git clone https://github.com/yuripramos/front-end-challenge/tree/yuri_ramos
+git clone https://github.com/yuripramos/front-end-challenge/
 cd front-end-challenge
+git checkout yuri_ramos
 npm install or yarn install
 npm run dev
 
