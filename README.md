@@ -5,7 +5,7 @@
 This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible <br/>
 1 - Click on the start button, the cards will be shuffled and flipped. <br/>
 2 - Click in one card, you can choose only one per click. <br/>
-3 - The game ends when there's no card left on the table. <br/>
+3 - After the click your card will be flipped and you can see the infos about it. <br/>
 
 
 ## :cloud: Installation
@@ -42,7 +42,7 @@ Want to use Continuous Deployment in other repositories? [**Check the docs**](ht
 
 ## :v: Tests
 
-Still in development
+npm run test
 
 ## :exclamation: Credits
 
