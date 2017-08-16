@@ -5,7 +5,7 @@ const Button = ({ start, isShowing }) => {
   return (
     <div className={style.buttonWrapper}>
       <button disabled={!isShowing} onClick={start}>
-        <a className={style.button1}>Iniciar</a>
+        <a className={style.button1}>Start</a>
       </button>
     </div>
   );

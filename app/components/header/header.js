@@ -7,8 +7,10 @@ const Header = ({ start, isShowing }) => {
 		<div>
 			<h1>O Destino</h1>
 			<p className={style.mainInstructions}>
-				Clique no botão Iniciar e selecione uma carta por vez.<br />
-				O jogo termina quando não houverem mais cartas para selecionar, boa sorte!
+				1 - Click on the start button, the cards will be shuffled and flipped. <br />
+				2 - Click in one card, you can choose only one per click. <br />
+				3 - After the click your card will be flipped and you can see the infos about it. <br />
+				4 - If you click in one card with another one already flipped the default action is to unflip this one.
 			</p>
 			<Button start={start} isShowing={isShowing} />
 		</div>
