@@ -1,4 +1,4 @@
-# React-Tarot
+# :black_joker: React-Tarot
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 
 ## :octocat: Getting Started
