@@ -45,6 +45,7 @@ class Container extends Component {
 
 export default Container;
 
+
 Container.propTypes = {
 	cards: PropTypes.array.isRequired,
 	item: PropTypes.func,
