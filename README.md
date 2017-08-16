@@ -1,50 +1,55 @@
-# front-end-challenge
+# React-Tarot
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 
-> Desafio para os futuros front-end's do [@Personare](https://github.com/Personare)
-
-## Introdução
-
-A nossa Product Owner pensou em um produto fantástico para ser desenvolvido, e um dos desafios é criação de um jogo de Tarot.
-
-<br>
-
-**Então, essa é a sua missão!**
-
-Criar um jogo de Tarot, permitindo o sorteio de uma carta.
-
-E as especificações são:
-
-- Tela de apresentação exibindo todas as cartas com seu conteúdo visível, e com um botão para iniciar o jogo.
-- Ao clicar no botão, as cartas deverão ser viradas - escondendo o conteúdo - e embaralhadas.
-- Permitir que o usuário selecione apenas uma carta, clicando na mesma.
-- Apresentar a carta selecionada, o nome da carta e uma descrição. (a descrição pode ser um lorem ipsum)
-
-OBS: As imagens e nomes das cartas estão listadas no arquivo [`tarot.json`](tarot.json), esse arquivo deve ser consumido via _http request_. A propriedade `image` de cada carta deve ser concatenada com a propriedade `imagesUrl`, para obter o endereço final da imagem. Utilize o valor da propriedade `imageBackCard` para obter a imagem do fundo da carta.
+## :octocat: Getting Started
+This is an app that shows "The Destiny" game, when you can play Tarot. Rules as much simple as possible <br/>
+1 - Click on the start button, the cards will be shuffled and flipped. <br/>
+2 - Click in one card, you can choose only one per click. <br/>
+3 - After the click your card will be flipped and you can see the infos about it. <br/>
+4 - If you click in one card with another one already flipped the default action is to unflip this one.
 
 
-## Instruções
-
-1. Efetue o **fork** deste repositório e crie um branch com o seu nome. (ex: caue-alves).
-2. Após finalizar o desafio, crie um **Pull Request**.
-3. Aguarde algum contribuidor realizar o code review.
+## :cloud: Installation
 
 
-## Pré-requisitos
+```sh
+git clone https://github.com/yuripramos/react-tarot-game
+cd react-tarot-game
+npm install or yarn install
+npm run dev
 
-- Aplicação feita em React
-- Possuir testes
-- Gerar versão de produção
-- Criar micro commits ou commits por features
-	- Detalhar nos comentários dos commits as decisões tomadas.
+# To build the app for production, run the following command:
+npm run build
+```
+
+## :yum: How to contribute
+Have an idea? Found a bug? PR? contact-me @ yuri.pramos@gmail.com
+
+## :on: Demo in Production (Continuous Deployment)
+http://realtor-donkey-55357.netlify.com
+
+Know more about this amazing service called [**Netlify**](https://www.netlify.com/) that I use for deployment.
+
+Want to use Continuous Deployment in other repositories? [**Check the docs**](https://www.netlify.com/docs/continuous-deployment/).
+
+## Roadmap
+
+**Release 0.0.1** (current) - First release of the app
+
+**Release 0.0.2** - Finish development of the unit tests, using JEST + Enzyme
+
+**Release 0.0.3** - Improvements in the responsiveness and UI
 
 
-## Diferenciais
+## :v: Tests
 
-- Boa documentação
-- Testes de componentes isolados
+npm run test
 
-## Dúvidas
+## :exclamation: Credits
 
-Se surgir alguma dúvida, consulte as [perguntas feitas anteriormente](https://github.com/Personare/front-end-challenge/labels/question).
+Yuri Ramos
 
-Caso não encontre a sua resposta, sinta-se à vontade para [abrir uma issue](https://github.com/Personare/front-end-challenge/issues/new) =]
+## :scroll: License
+
+MIT
+>>>>>>> yuri_ramos
