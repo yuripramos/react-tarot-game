@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+<<<<<<< HEAD
+=======
+import { Provider } from 'react-redux';
+import auth from '../helpers/auth.js';
+>>>>>>> old-origin/solution_redux
 import '../assets/styles/app.css';
 import Header from './header/header.js';
 import Container from './container/container.js';
 
+var store = require('../store/configureStore').configure();
 
 export default class App extends Component {
 	constructor(props) {
@@ -30,6 +36,7 @@ export default class App extends Component {
 		this.setState({ isShowing: false, shuffledCards: this.shuffle(this.state.items.cards) });
 	}
 
+<<<<<<< HEAD
 	render() {
 		return (
 			<div className="container">
@@ -48,4 +55,26 @@ export default class App extends Component {
 			</div>
 		);
 	}
+=======
+  render() {
+    return (
+      <Provider store={store}>
+        <div className="container">
+          <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+            <Header start={this.start} isShowing={this.state.isShowing} />
+            {
+            this.state.loaded &&
+              <Container
+                cards={this.state.items.cards}
+                basePath={this.state.items.imagesUrl}
+                backCard={this.state.items.imageBackCard}
+                isShowing={this.state.isShowing}
+              />
+            }
+          </div>
+        </div>
+      </Provider>
+    );
+  }
+>>>>>>> old-origin/solution_redux
 }

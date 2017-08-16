@@ -1,7 +1,10 @@
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/actions.js';
 import Card from './card/card.js';
 
 class Container extends Component {
+<<<<<<< HEAD
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -10,6 +13,21 @@ class Container extends Component {
 		};
 		this.historyToggleStates = this.historyToggleStates.bind(this);
 	}
+=======
+  constructor(props) {
+    super(props);
+    this.state = {
+      // isFlipped: false,
+      history: [],
+    };
+    this.historyToggleStates = this.historyToggleStates.bind(this);
+  }
+  historyToggleStates(bool, id) {
+    this.setState({
+      history: this.state.history.concat([{ opened: bool, id }]),
+    });
+  }
+>>>>>>> old-origin/solution_redux
 
 	historyToggleStates() {
 		this.setState({ countClicks: this.state.countClicks + 1, cardsState: !this.state.cardsState });
@@ -43,7 +61,26 @@ class Container extends Component {
 	}
 }
 
-export default Container;
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     history: state.concat([{ opened: state.bool, id: state.id }]),
+//   }
+// }
+
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   return {
+//     onClick: () => {
+//       dispatch(actions.toggleEachCard(ownProps))
+//     }
+//   };
+// }
+
+const container = connect((state) => {
+  return state;
+})(Container);
+
+export default container;
+
 
 
 Container.propTypes = {
