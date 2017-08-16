@@ -2649,7 +2649,7 @@ var Button = function Button(_ref) {
       _react2.default.createElement(
         'a',
         { className: _style2.default.button1 },
-        'Iniciar'
+        'Start'
       )
     )
   );
@@ -2692,14 +2692,18 @@ var Header = function Header(_ref) {
 		_react2.default.createElement(
 			'h1',
 			null,
-			'O Destino'
+			'The Destiny'
 		),
 		_react2.default.createElement(
 			'p',
 			{ className: _style2.default.mainInstructions },
-			'Clique no bot\xE3o Iniciar e selecione uma carta por vez.',
+			'1 - Click on the start button, the cards will be shuffled and flipped. ',
 			_react2.default.createElement('br', null),
-			'O jogo termina quando n\xE3o houverem mais cartas para selecionar, boa sorte!'
+			'2 - Click in one card, you can choose only one per click. ',
+			_react2.default.createElement('br', null),
+			'3 - After the click your card will be flipped and you can see the infos about it. ',
+			_react2.default.createElement('br', null),
+			'4 - If you click in one card with another one already flipped the default action is to unflip this one.'
 		),
 		_react2.default.createElement(_Button2.default, { start: start, isShowing: isShowing })
 	);
@@ -5972,4 +5976,4 @@ exports.default = function (nodeList) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.7af4d615be3849d89a85.js.map
+//# sourceMappingURL=bundle.ef5edf46c328a1371a59.js.map

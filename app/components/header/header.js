@@ -5,7 +5,7 @@ import style from './style.scss';
 const Header = ({ start, isShowing }) => {
 	return (
 		<div>
-			<h1>O Destino</h1>
+			<h1>The Destiny</h1>
 			<p className={style.mainInstructions}>
 				1 - Click on the start button, the cards will be shuffled and flipped. <br />
 				2 - Click in one card, you can choose only one per click. <br />
