@@ -21,26 +21,15 @@ class Card extends Component {
 		}
 	}
 
-<<<<<<< HEAD
-	handleClick(e) {
-		const { historyToggleStates } = this.props;
-		if (e) {
-			e.preventDefault();
-		}
-
-		this.setState({ isFlipped: !this.state.isFlipped }, () => {
-			historyToggleStates();
-		});
-	}
-
-	checkOneOpened(e) {
+	checkOneOpened(id) {
+		const { dispatch } = this.props;
 		if (!this.props.isShowing) {
-			this.handleClick(e);
+			dispatch(actions.toggleEachCard(id, this.state.isFlipped));
 		}
 	}
 
 	render() {
-		const { item, basePath, backCard, isShowing } = this.props;
+		const { item, basePath, backCard, isShowing, keyId } = this.props;
 		return (
 			<div className={`col-lg-2 col-md-3 col-sm-6 ${style.card}`}>
 				<ReactCardFlip
@@ -56,7 +45,7 @@ class Card extends Component {
 						data-multiline
 					>
 						<button
-							onClick={() => this.checkOneOpened()}
+							onClick={() => this.checkOneOpened(keyId)}
 						>
 							<img src={isShowing ? `${basePath}${item.image}` : backCard} alt={item.name} className={`${style.img}`} />
 						</button>
@@ -68,7 +57,7 @@ class Card extends Component {
 						data-multiline
 					>
 						<button
-							onClick={() => this.checkOneOpened()}
+							onClick={() => this.checkOneOpened(keyId)}
 						>
 							<img src={isShowing ? backCard : `${basePath}${item.image}`} alt={item.name} className={`${style.img}`} />
 						</button>
@@ -78,54 +67,7 @@ class Card extends Component {
 			</div>
 		);
 	}
-=======
-  checkOneOpened(id) {
-    const { dispatch } = this.props;
-    if (!this.props.isShowing) {
-      dispatch(actions.toggleEachCard(id, this.state.isFlipped));
-    }
-  }
 
-  render() {
-    const { item, basePath, backCard, isShowing, keyId } = this.props;
-    return (
-      <div className={`col-lg-2 col-md-3 col-sm-6 ${style.card}`}>
-        <ReactCardFlip
-          isFlipped={this.state.isFlipped}
-          flipSpeedBackToFront={0.9}
-          flipSpeedFrontToBack={0.9}
-        >
-          <div
-            key="front"
-            data-tip={isShowing ?
-            `${item.name} <br/> <br/> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum` :
-            'clique para descobrir'}
-            data-multiline
-          >
-            <button
-              onClick={() => this.checkOneOpened(keyId)}
-            >
-              <img src={isShowing ? `${basePath}${item.image}` : backCard} alt={item.name} className={`${style.img}`} />
-            </button>
-          </div>
-          <div
-            key="back"
-            data-tip={isShowing ? '' :
-            `${item.name} <br/> <br/> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum`}
-            data-multiline
-          >
-            <button
-              onClick={() => this.checkOneOpened(keyId)}
-            >
-              <img src={isShowing ? backCard : `${basePath}${item.image}`} alt={item.name} className={`${style.img}`} />
-            </button>
-          </div>
-        </ReactCardFlip>
-        <ReactTooltip />
-      </div>
-    );
-  }
->>>>>>> old-origin/solution_redux
 }
 
 export default Redux.connect()(Card);

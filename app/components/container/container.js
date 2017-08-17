@@ -4,33 +4,18 @@ import * as actions from '../../actions/actions.js';
 import Card from './card/card.js';
 
 class Container extends Component {
-<<<<<<< HEAD
 	constructor(props) {
 		super(props);
 		this.state = {
-			countClicks: 0,
-			cardsState: true,
+			// isFlipped: false,
+			history: [],
 		};
 		this.historyToggleStates = this.historyToggleStates.bind(this);
 	}
-=======
-  constructor(props) {
-    super(props);
-    this.state = {
-      // isFlipped: false,
-      history: [],
-    };
-    this.historyToggleStates = this.historyToggleStates.bind(this);
-  }
-  historyToggleStates(bool, id) {
-    this.setState({
-      history: this.state.history.concat([{ opened: bool, id }]),
-    });
-  }
->>>>>>> old-origin/solution_redux
-
-	historyToggleStates() {
-		this.setState({ countClicks: this.state.countClicks + 1, cardsState: !this.state.cardsState });
+	historyToggleStates(bool, id) {
+		this.setState({
+			history: this.state.history.concat([{ opened: bool, id }]),
+		});
 	}
 
 	render() {
@@ -76,11 +61,10 @@ class Container extends Component {
 // }
 
 const container = connect((state) => {
-  return state;
+	return state;
 })(Container);
 
 export default container;
-
 
 
 Container.propTypes = {
