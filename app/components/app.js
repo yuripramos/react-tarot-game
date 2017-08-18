@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import '../assets/styles/app.css';
 import Header from './header/header.js';
 import Container from './container/container.js';
+import { fetchAllCards } from '../actions/actions.js';
 
 var store = require('../store/configureStore').configure();
 
@@ -16,10 +17,11 @@ export default class App extends Component {
 			shuffledCards: [],
 			isShowing: true,
 		};
-		axios.get('https://raw.githubusercontent.com/Personare/front-end-challenge/master/tarot.json')
-		.then(res => {
-			this.setState({ items: res.data, loaded: true });
-		});
+		// axios.get('https://raw.githubusercontent.com/Personare/front-end-challenge/master/tarot.json')
+		// .then(res => {
+		// 	this.setState({ items: res.data, loaded: true });
+		// });
+		store.dispatch(fetchAllCards());
 		this.start = this.start.bind(this);
 	}
 	shuffle(a) {

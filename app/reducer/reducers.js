@@ -26,3 +26,30 @@ export const flipAllCardsReducer = (state = false, action) => {
 		return state;
 	}
 };
+
+
+export const fetchAllCardsReducer = (state = {}, action) => {
+	switch (action.type) {
+	case 'FETCH_ALL_CARDS':
+		return {
+			fetchingCards: true,
+			fetchedCards: false,
+		};
+	case 'FETCH_ALL_CARDS_SUCCESS':
+		return {
+			...state,
+			fetchingCards: false,
+			fetchedCards: true,
+			cards: action.cards,
+		};
+	case 'FETCH_ALL_CARDS_FAILURE':
+		return {
+			...state,
+			error: action.error,
+			fetchingCards: false,
+			fetchedCards: false,
+		};
+	default:
+		return state;
+	}
+};

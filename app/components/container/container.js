@@ -19,6 +19,7 @@ class Container extends Component {
 	}
 
 	render() {
+		console.log('propssss', this.props);
 		const rest = {
 			basePath: this.props.basePath,
 			backCard: this.props.backCard,
@@ -29,7 +30,7 @@ class Container extends Component {
 			cardsState: this.state.cardsState,
 
 		};
-		const cardsMap = this.props.cards.map((item, key) => {
+		const cardsMap = (this.props.cards || []).map((item, key) => {
 			return (
 				<Card
 					item={item}
@@ -46,9 +47,9 @@ class Container extends Component {
 	}
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
 	return {
-		state: ownProps.cards,
+		cards: state.fetchAllCards.cards,
 	};
 };
 
@@ -56,8 +57,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
 		onClick: () => {
-			dispatch(actions.toggleEachCard(ownProps.cards))
-		}
+			dispatch(actions.toggleEachCard(ownProps.cards));
+		},
 	};
 };
 
