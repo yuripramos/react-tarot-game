@@ -36,11 +36,13 @@
     "react-addons-test-utils": "15.4.2",
     "react-card-flip": "^0.0.8",
     "react-dom": "15.4.2",
+    "react-redux": "^5.0.6",
     "react-test-renderer": "15.4.2",
     "react-tooltip": "^3.3.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "url-loader": "^0.5.9",
     "webpack": "^2.2",
-    "redux-thunk": "^2.2.0",
     "webpack-dev-server": "^2.5.0"
   },
   "devDependencies": {

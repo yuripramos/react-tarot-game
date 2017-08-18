@@ -46,23 +46,22 @@ class Container extends Component {
 	}
 }
 
-// const mapStateToProps = (state, ownProps) => {
-//   return {
-//     history: state.concat([{ opened: state.bool, id: state.id }]),
-//   }
-// }
+const mapStateToProps = (state, ownProps) => {
+	return {
+		state: ownProps.cards,
+	};
+};
 
-// const mapDispatchToProps = (dispatch, ownProps) => {
-//   return {
-//     onClick: () => {
-//       dispatch(actions.toggleEachCard(ownProps))
-//     }
-//   };
-// }
 
-const container = connect((state) => {
-	return state;
-})(Container);
+const mapDispatchToProps = (dispatch, ownProps) => {
+	return {
+		onClick: () => {
+			dispatch(actions.toggleEachCard(ownProps.cards))
+		}
+	};
+};
+
+const container = connect(mapStateToProps, mapDispatchToProps)(Container);
 
 export default container;
 

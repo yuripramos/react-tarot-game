@@ -11,7 +11,6 @@ class Card extends Component {
 		this.state = {
 			isFlipped: false,
 		};
-		this.handleClick = this.handleClick.bind(this);
 		this.checkOneOpened = this.checkOneOpened.bind(this);
 	}
 
